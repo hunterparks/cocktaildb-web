@@ -1,10 +1,12 @@
-<script>
-	export let cocktail;
+<script lang="typescript">
+	import type { CocktailType } from '../global';
+
+	export let cocktail: CocktailType;
 </script>
 
-<a href={`/cocktail/${cocktail.idDrink}`}>
-	<img src={cocktail.strDrinkThumb} alt={`${cocktail.strDrink} thumbnail`} />
-	<p>{cocktail.strDrink}</p>
+<a href={`/cocktail/${cocktail.id}`}>
+	<img src={cocktail.thumbUrl} alt={`${cocktail.name} thumbnail`} />
+	<p>{cocktail.name}</p>
 </a>
 
 <style>
